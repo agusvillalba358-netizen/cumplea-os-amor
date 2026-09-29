@@ -1,0 +1,1085 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Cumpleaños, Mi Amor ❤️</title>
+
+<style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #ffb6d9, transparent 40%),
+        linear-gradient(135deg, #7b164f, #c2185b, #5a1645);
+
+    color: white;
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   CORAZÓN
+========================= */
+
+.corazon {
+
+    font-size: 70px;
+
+    animation: latido 1.3s infinite;
+
+    filter:
+        drop-shadow(0 5px 10px rgba(0,0,0,.3));
+}
+
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+h1 {
+
+    font-size: clamp(32px, 8vw, 55px);
+
+    margin: 15px 0;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,.4);
+}
+
+
+.subtitulo {
+
+    font-size: 20px;
+
+    opacity: .95;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background:
+        rgba(255,255,255,.14);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    line-height: 1.7;
+
+    font-size: 18px;
+}
+
+
+.firma {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: white;
+
+    color: #b01659;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    transition: .3s;
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+}
+
+
+button:active {
+
+    transform: scale(.95);
+}
+
+
+/* =========================
+   SEGUNDA PARTE
+========================= */
+
+#segundaParte {
+
+    display: none;
+
+    animation:
+        aparecer 1.5s ease;
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================
+   BOTÓN DE MÚSICA
+========================= */
+
+#botonMusica {
+
+    margin-top: 20px;
+
+    padding: 12px 24px;
+
+    font-size: 16px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    color: #b01659;
+
+}
+
+
+/* =========================
+   CAJA DE REGALO
+========================= */
+
+.caja-contenedor {
+
+    margin-top: 35px;
+
+    position: relative;
+
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.caja {
+
+    position: relative;
+
+    width: 160px;
+    height: 110px;
+
+    background: #d81b60;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 25px rgba(0,0,0,.3);
+
+    cursor: pointer;
+
+    transition:
+        transform .4s;
+}
+
+
+.caja:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TAPA
+========================= */
+
+.tapa {
+
+    position: absolute;
+
+    width: 180px;
+    height: 45px;
+
+    background: #ec407a;
+
+    left: -10px;
+    top: -35px;
+
+    border-radius: 8px;
+
+    transition:
+        transform 1s ease,
+        top 1s ease;
+
+}
+
+
+/* =========================
+   CINTA
+========================= */
+
+.cinta {
+
+    position: absolute;
+
+    width: 30px;
+    height: 100%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #ffd54f;
+}
+
+
+.cinta-tapa {
+
+    position: absolute;
+
+    width: 30px;
+    height: 45px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #ffd54f;
+}
+
+
+/* =========================
+   MOÑO
+========================= */
+
+.moño {
+
+    position: absolute;
+
+    top: -65px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   TEXTO DEL REGALO
+========================= */
+
+.texto-regalo {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   SORPRESA FINAL
+========================= */
+
+#sorpresa {
+
+    display: none;
+
+    margin-top: 35px;
+
+    animation:
+        sorpresa .9s ease;
+}
+
+
+@keyframes sorpresa {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.5);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   DOS REGALOS
+========================= */
+
+.regalos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-top: 25px;
+
+    font-size: 75px;
+}
+
+
+.prenda {
+
+    animation:
+        aparecerPrenda 1s ease;
+}
+
+
+@keyframes aparecerPrenda {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(.5);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-final {
+
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+}
+
+
+.coqueto {
+
+    font-size: 25px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   FLORES Y CORAZONES
+========================= */
+
+.caida {
+
+    position: fixed;
+
+    top: -50px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation:
+        caer linear forwards;
+}
+
+
+@keyframes caer {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   MÓVILES
+========================= */
+
+@media(max-width:600px) {
+
+    .carta {
+
+        padding: 22px;
+
+        font-size: 16px;
+    }
+
+
+    .regalos {
+
+        font-size: 60px;
+
+        gap: 20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="contenedor">
+
+
+    <!-- =====================
+         CORAZÓN
+    ====================== -->
+
+    <div class="corazon">
+
+        ❤️
+
+    </div>
+
+
+    <!-- =====================
+         TITULO
+    ====================== -->
+
+    <h1>
+
+        ¡Feliz Cumpleaños, mi amor! 🎂
+
+    </h1>
+
+
+    <div class="subtitulo">
+
+        Hoy es un día muy especial porque naciste vos. ❤️
+
+    </div>
+
+
+    <!-- =====================
+         CARTA
+    ====================== -->
+
+    <div class="carta">
+
+        <p>
+
+            Hoy quiero aprovechar este día para
+            recordarte lo importante que sos para mí, 
+			porque cada detalle esta hecho con cada parte 
+			de mi amor hacia ti amor mío.
+
+        </p>
+
+
+        <p>
+
+            Gracias por cada momento que compartimos,
+            por cada sonrisa, cada abrazo y por todas
+            esas pequeñas cosas que hacen que estar
+            a tu lado sea tan único y hermoso.
+
+        </p>
+
+
+        <p>
+
+            Deseo que este nuevo año de tu vida esté
+            lleno logros y de muchisimos momentos juntos.
+
+        </p>
+
+
+        <p>
+
+            Y espero poder seguir estando a tu lado
+            para celebrar muchos cumpleaños más juntos. ❤️
+
+        </p>
+
+
+        <div class="firma">
+
+            Te amo muchísimo.
+
+            <br><br>
+
+            — Agus ❤️
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         BOTÓN PRINCIPAL
+    ====================== -->
+
+    <button onclick="mostrarRegalo()">
+
+        💝 Hay un último regalito...
+
+    </button>
+
+
+    <!-- =====================
+         SEGUNDA PARTE
+    ====================== -->
+
+    <div id="segundaParte">
+
+
+        <h2 style="margin-top:40px;">
+
+            Este regalo es un poquito diferente... 😏
+
+        </h2>
+
+
+        <p class="texto-regalo">
+
+            Es solamente para vos. ❤️
+
+        </p>
+
+
+        <!-- =====================
+             BOTÓN DE MÚSICA
+        ====================== -->
+
+        <button
+            id="botonMusica"
+            onclick="controlarMusica()"
+        >
+
+            ⏸️ Pausar música
+
+        </button>
+
+
+        <!-- =====================
+             CAJA
+        ====================== -->
+
+        <div class="caja-contenedor">
+
+
+            <div
+                class="caja"
+                onclick="abrirCaja()"
+            >
+
+
+                <div class="tapa">
+
+                    <div class="cinta-tapa"></div>
+
+                </div>
+
+
+                <div class="cinta"></div>
+
+
+                <div class="moño">
+
+                    🎀
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <p>
+
+            Tocá la cajita para abrir tu regalo 🎁
+
+        </p>
+
+
+        <!-- =====================
+             SORPRESA
+        ====================== -->
+
+        <div id="sorpresa">
+
+
+            <h2>
+
+                ¡Sorpresa! 😏❤️
+
+            </h2>
+
+
+            <div class="regalos">
+
+
+                <div class="prenda">
+
+                    👙
+
+                </div>
+
+
+                <div class="prenda">
+
+                    👙
+
+                </div>
+
+
+            </div>
+
+
+            <div class="mensaje-final">
+
+
+                <p>
+
+                    Porque quería darte algo bonito...
+                    pero también algo un poquito más
+                    <b>íntimo y especial</b>. 😏
+
+                </p>
+
+
+                <p>
+
+                    Espero que te gusten tus dos regalitos,
+                    mi amor. ❤️
+
+                </p>
+
+
+                <div class="coqueto">
+
+                    Y bueno... después vemos cómo
+                    estrenamos el regalo. 😏❤️
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================
+     MÚSICA
+========================= -->
+
+<audio
+    id="musica"
+    loop
+>
+
+    <source
+        src="musica.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+
+/* =========================
+   MOSTRAR REGALO
+========================= */
+
+function mostrarRegalo() {
+
+
+    document.getElementById(
+        "segundaParte"
+    ).style.display = "block";
+
+
+    const musica =
+        document.getElementById("musica");
+
+
+    /*
+       Intentamos iniciar la música.
+       Como esta función se ejecuta
+       después de tocar un botón,
+       los navegadores normalmente
+       permiten la reproducción.
+    */
+
+    musica.play()
+        .then(function() {
+
+            document.getElementById(
+                "botonMusica"
+            ).innerHTML =
+                "⏸️ Pausar música";
+
+        })
+        .catch(function(error) {
+
+            /*
+               Si el navegador no permite
+               iniciar la música automáticamente,
+               dejamos el botón preparado
+               para que ella pueda iniciarla.
+            */
+
+            document.getElementById(
+                "botonMusica"
+            ).innerHTML =
+                "▶️ Reproducir música";
+
+        });
+
+
+    crearCaida();
+
+}
+
+
+/* =========================
+   CONTROLAR MÚSICA
+========================= */
+
+function controlarMusica() {
+
+
+    const musica =
+        document.getElementById("musica");
+
+
+    const boton =
+        document.getElementById("botonMusica");
+
+
+    if (musica.paused) {
+
+
+        musica.play()
+            .then(function() {
+
+                boton.innerHTML =
+                    "⏸️ Pausar música";
+
+            });
+
+
+    } else {
+
+
+        musica.pause();
+
+
+        boton.innerHTML =
+            "▶️ Reproducir música";
+
+    }
+
+}
+
+
+/* =========================
+   ABRIR CAJA
+========================= */
+
+function abrirCaja() {
+
+
+    const tapa =
+        document.querySelector(".tapa");
+
+
+    tapa.style.transform =
+        "translateY(-90px) rotate(-8deg)";
+
+
+    document.getElementById(
+        "sorpresa"
+    ).style.display = "block";
+
+
+    crearCaidaIntensa();
+
+}
+
+
+/* =========================
+   FLORES Y CORAZONES
+========================= */
+
+function crearCaida() {
+
+
+    const elementos = [
+
+        "❤️",
+        "🌹",
+        "🌸",
+        "✨",
+        "💕"
+
+    ];
+
+
+    for(let i = 0; i < 30; i++) {
+
+
+        const elemento =
+            document.createElement("div");
+
+
+        elemento.className =
+            "caida";
+
+
+        elemento.innerHTML =
+            elementos[
+                Math.floor(
+                    Math.random() *
+                    elementos.length
+                )
+            ];
+
+
+        elemento.style.left =
+            Math.random() * 100 + "vw";
+
+
+        elemento.style.fontSize =
+            (Math.random() * 20 + 15) + "px";
+
+
+        elemento.style.animationDuration =
+            (Math.random() * 4 + 4) + "s";
+
+
+        elemento.style.animationDelay =
+            Math.random() * 3 + "s";
+
+
+        document.body.appendChild(elemento);
+
+
+        setTimeout(function() {
+
+            elemento.remove();
+
+        }, 9000);
+
+    }
+
+}
+
+
+/* =========================
+   SORPRESA FINAL
+========================= */
+
+function crearCaidaIntensa() {
+
+
+    const elementos = [
+
+        "❤️",
+        "💕",
+        "💗",
+        "🌹",
+        "✨",
+        "🎀"
+
+    ];
+
+
+    for(let i = 0; i < 60; i++) {
+
+
+        const elemento =
+            document.createElement("div");
+
+
+        elemento.className =
+            "caida";
+
+
+        elemento.innerHTML =
+            elementos[
+                Math.floor(
+                    Math.random() *
+                    elementos.length
+                )
+            ];
+
+
+        elemento.style.left =
+            Math.random() * 100 + "vw";
+
+
+        elemento.style.fontSize =
+            (Math.random() * 25 + 15) + "px";
+
+
+        elemento.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+
+        elemento.style.animationDelay =
+            Math.random() * 2 + "s";
+
+
+        document.body.appendChild(elemento);
+
+
+        setTimeout(function() {
+
+            elemento.remove();
+
+        }, 8000);
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
+```
+
